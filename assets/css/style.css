@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav {
+    padding: 10px;
+    grid-area: menu;
+    background: #0037a1;
+    color: white;
+    }
+
+ul{
+    list-style: none;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul li{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+} 
+a:hover{
+    color: orange;
+}   
+i{
+    font-size: 1.5rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+.navbar .logo{
+    font-size: 2rem;
+    font-weight: bold;
+}    
+
+header{
+    padding: 10px;
+    grid-area: header;
+    background: #5383e4;
+    color: white;
+    }  
+    
+.filtros {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        }
+
+    .filtros select{
+        width: 100%;
+    }
+        
+
+main {
+    grid-area: seccion-principal;
+    padding: 10px;
+    }
+main .row{display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    gap: 10px;}
+
+    .card {
+        background-color: aliceblue;
+        max-width: 300px;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+        font-family: arial;
+        gap: 10px;
+      }
+    
+      .card img{
+        width: 100%;
+      }
+      
+      .price {
+        color: grey;
+        font-size: 22px;
+      }
+      
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+      
+      .card button:hover {
+        opacity: 0.7;
+      }
+
+.container,
+.button  ,  
+.links,
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 100px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    border-radius: 8px;
+    column-gap: 12px;
+}
+.button{
+
+    border: none;
+}
+
+.button,
+.link{
+    height: 45px;
+    width: 45px;
+    font: size 20px;
+    color: #666;
+    background-color: #f2f2f2;
+    border-radius: 6px0;}
+
+.links{
+    column-gap: 12px;
+}
+
+.link{
+    font-weight: 500;
+    text-decoration: none;
+}
+    
+
+footer {
+    grid-area: pie-de-pagina;
+    background: #aa9bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    }
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}    
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .1fr 10fr .3fr;
+        grid-template-areas:
+        "menu"
+        "header"
+        "seccion-principal"
+        "pie-de-pagina";
+        } 
+  
+@media (min-width: 576px){
+    .grid-container{
+        grid-template-areas:
+        "menu header"
+        "menu seccion-principal"
+        "menu seccion-principal"
+        "pie-de-pagina seccion-principal";
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: 100px 1fr 7fr .2fr;
+        }
+
+     ul{
+         list-style: none;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items:center;
+         justify-content: space-around;
+         margin-right: 50px;
+         margin-top: 40px;
+     }
+     ul li{
+         padding: 5px;
+         margin-left: 5px;
+     }
+     a{
+         text-decoration: none;
+         color: white;
+         font-size: 1rem;
+     } 
+     a:hover{
+         color: orange;
+     }
+     .navbar i{
+         display: none;
+     }  
+     .navbar{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+     }
+      
+     main .row{
+         display: grid;
+         grid-template-columns: auto  auto auto auto;
+         grid-template-rows:   auto auto  ;
+         gap: 10px;
+         justify-items: center;
+         align-items: center;
+         height: 500px;
+         padding: 20px;
+         padding-top: 0;
+         padding-bottom: 0;
+
+        }
+
+         .container{
+            padding: 100px;
+            padding-top: 410px;
+            padding-bottom: 0;
+            border-radius: 8px;
+            column-gap: 12px;
+        }     
+}
